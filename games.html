@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>— games</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700;800&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="paw.js"></script>
+</head>
+<body>
+
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+                  <filter id="fur-edge" x="-60%" y="-60%" width="220%" height="220%">
+        <feTurbulence type="fractalNoise" baseFrequency="0.018" numOctaves="2" seed="7" result="wave"/>
+        <feDisplacementMap in="SourceGraphic" in2="wave" scale="24" xChannelSelector="R" yChannelSelector="G" result="swell"/>
+        <feTurbulence type="fractalNoise" baseFrequency="0.05" numOctaves="2" seed="3" result="clump"/>
+        <feDisplacementMap in="swell" in2="clump" scale="9" xChannelSelector="R" yChannelSelector="G" result="lobe"/>
+        <feGaussianBlur in="lobe" stdDeviation="0.9"/>
+      </filter>
+      <filter id="fur-inner" x="-35%" y="-35%" width="170%" height="170%">
+        <feTurbulence type="fractalNoise" baseFrequency="0.5" numOctaves="2" seed="11" result="hair2"/>
+        <feDisplacementMap in="SourceGraphic" in2="hair2" scale="9" xChannelSelector="R" yChannelSelector="G" result="shred2"/>
+        <feTurbulence type="fractalNoise" baseFrequency="0.07" numOctaves="3" seed="13" result="clump2"/>
+        <feDisplacementMap in="shred2" in2="clump2" scale="10" xChannelSelector="R" yChannelSelector="G"/>
+      </filter>
+      <filter id="fur-fine" x="-25%" y="-25%" width="150%" height="150%">
+        <feTurbulence type="fractalNoise" baseFrequency="0.14 0.2" numOctaves="5" seed="3" result="n2"/>
+        <feDisplacementMap in="SourceGraphic" in2="n2" scale="12" xChannelSelector="R" yChannelSelector="G"/>
+      </filter>
+    </defs>
+  </svg>
+
+  <nav class="container">
+    <a href="index.html">— home</a>
+    <a href="about.html">— about</a>
+    <a href="games.html" aria-current="page">— games</a>
+    <a href="contact.html">— social</a>
+  </nav>
+
+  <header class="container">
+    <h1>— games</h1>
+  </header>
+
+  <section class="container">
+    <h2>Released</h2>
+    <ul class="btn-list">
+      <li><button type="button" class="btn btn-ghost"><strong>coming</strong> soon</button></li>
+      <li><button type="button" class="btn btn-ghost"><strong>coming</strong> soon</button></li>
+      <li><button type="button" class="btn btn-ghost"><strong>coming</strong> soon</button></li>
+    </ul>
+  </section>
+
+  <section class="container">
+    <h2>in development</h2>
+    <p>placeholder text</p>
+    <p><a class="btn" href="contact.html">Get notified when it ships &rarr;</a></p>
+  </section>
+
+  <footer class="container">
+    <p>&copy; 2026 Fluffy Thems</p>
+  </footer>
+
+</body>
+</html>
